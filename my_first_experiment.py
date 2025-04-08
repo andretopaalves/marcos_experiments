@@ -15,8 +15,8 @@ def my_first_experiment():
 	event_dict = {'tx0': (tx0_times, tx0_amps)}
 	exp.add_flodict(event_dict)
 	exp.add_flodict({'rx0_en': (np.array([200,400]),np.array([1,0]))})
-	#exp.plot_sequence()
-	#plt.show()
+	exp.plot_sequence()
+	plt.show()
 	rxd, msgs = exp.run()
 	exp.close_server(only_if_sim=True)	
 
